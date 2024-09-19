@@ -1,10 +1,10 @@
 import "dotenv/config";
-import Test from "../components/text";
+import Chatbot from "../components/Chatbot";
 // import Image from "next/image";
 // import styles from "./page.module.css";
 
 export default function Home() {
-  return <Test />;
+  return <Chatbot />;
 }
 
 ///BE - implement express for the prompt endpoint
