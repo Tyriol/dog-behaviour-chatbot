@@ -1,6 +1,7 @@
 :root {
   --balck: rgb(40, 40, 40);
   --white: rgb(255, 255, 255);
+  --grey: rgb(200, 200, 200);
   --color: rgb(171, 207, 252);
 }
 
@@ -28,6 +29,7 @@ body {
 /* INTRO */
 .intro-container {
   margin: 2rem 0;
+  line-height: 1.6rem;
 }
 
 /* CHARDS */
@@ -40,7 +42,8 @@ body {
 .card {
   margin: 1rem;
   border-radius: 1rem;
-  box-shadow: 5px 5px 15px 2px rgb(139, 139, 139);
+  box-shadow: 5px 5px 15px 2px var(--grey);
+  line-height: 1.2rem;
 }
 .card-title {
   padding: 0 1rem;
@@ -78,7 +81,7 @@ body {
   align-items: center;
 }
 .chatbot-request {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .chatbot-request form {
   display: flex;
