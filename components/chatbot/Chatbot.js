@@ -19,7 +19,7 @@ export default function Chatbot() {
   }
 
   return (
-    <div>
+    <div className="chatbot-container">
       <form onSubmit={(e) => handleSubmit(e)}>
         <fileset>
           <legend>How can we help</legend>

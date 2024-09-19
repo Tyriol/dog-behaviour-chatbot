@@ -1,0 +1,61 @@
+:root {
+  --balck: rgb(40, 40, 40);
+  --white: rgb(255, 255, 255);
+  --secondary-color: rgb(200, 200, 200);
+  --tertiary-color: rgb(139, 139, 139);
+}
+
+body {
+  margin: 0;
+}
+.header {
+  background-color: var(--balck);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+.header h1 {
+  font-size: 4rem;
+}
+.intro-container {
+  padding: 1rem;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+}
+
+.card {
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px 2px rgb(139, 139, 139);
+}
+.card-title {
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+.card-image {
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.card-text {
+  padding: 0 1rem;
+  text-align: justify;
+  margin: 1rem 0;
+}
+
+.footer {
+  background-color: var(--balck);
+  padding: 2rem;
+  color: var(--white);
+}
+
+.chatbot-container {
+  background-color: rgb(200, 200, 200);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 500px;
+  width: 400px;
+}
