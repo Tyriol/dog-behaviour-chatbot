@@ -1,6 +1,7 @@
 :root {
   --balck: rgb(40, 40, 40);
   --white: rgb(255, 255, 255);
+  --color: rgb(171, 207, 252);
 }
 
 /* GLOBAL */
@@ -62,7 +63,7 @@ body {
 
 /* CHATBOT */
 .chatbot-container {
-  background-color: rgb(230, 230, 255);
+  background-color: var(--color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
