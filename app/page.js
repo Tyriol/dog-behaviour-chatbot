@@ -1,12 +1,19 @@
 import "dotenv/config";
-import Chatbot from "../components/Chatbot";
+import Header from "../components/header/Header";
+import Main from "../components/main/Main";
+import Footer from "../components/footer/Footer";
+import Chatbot from "../components/chatbot/Chatbot";
+
 // import Image from "next/image";
 // import styles from "./page.module.css";
 
 export default function Home() {
-  return <Chatbot />;
+  return (
+    <>
+      <Header />
+      <Main />
+      <Footer />
+      <Chatbot />
+    </>
+  );
 }
-
-///BE - implement express for the prompt endpoint
-///FE - build the prompt element
-// what about the home page?

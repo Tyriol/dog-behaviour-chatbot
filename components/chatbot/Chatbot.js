@@ -12,6 +12,7 @@ export default function Chatbot() {
     setInputValue(e.target.value);
   }
 
+  // create a function to submit the input value
   function handleSubmit(e) {
     e.preventDefault();
     console.log("InputValue:", inputValue);
@@ -20,11 +21,14 @@ export default function Chatbot() {
   return (
     <div>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <label>
-          How can we help?
-          <input type="text" onChange={(e) => handleChange(e)} />
-        </label>
-        <button type="submit">submit</button>
+        <fileset>
+          <legend>How can we help</legend>
+          <label>
+            Ask a question
+            <input type="text" onChange={(e) => handleChange(e)} />
+          </label>
+          <button type="submit">submit</button>
+        </fileset>
       </form>
       <section className="response-display">
         <p></p>
