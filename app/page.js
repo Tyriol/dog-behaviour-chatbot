@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Chatbot />
       <Main />
       <Footer />
-      <Chatbot />
     </>
   );
 }

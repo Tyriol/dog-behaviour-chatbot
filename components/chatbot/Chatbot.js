@@ -20,18 +20,15 @@ export default function Chatbot() {
 
   return (
     <div className="chatbot-container">
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <fileset>
-          <legend>How can we help</legend>
-          <label>
-            Ask a question
-            <input type="text" onChange={(e) => handleChange(e)} />
-          </label>
+      <section className="chatbot-response">
+        <p>RESPONSE</p>
+      </section>
+      <section className="chatbot-request">
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <label htmlFor="prompt">How can I help?</label>
+          <input id="prompt" type="text" onChange={(e) => handleChange(e)} />
           <button type="submit">submit</button>
-        </fileset>
-      </form>
-      <section className="response-display">
-        <p></p>
+        </form>
       </section>
     </div>
   );

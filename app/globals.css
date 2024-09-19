@@ -1,13 +1,14 @@
 :root {
   --balck: rgb(40, 40, 40);
   --white: rgb(255, 255, 255);
-  --secondary-color: rgb(200, 200, 200);
-  --tertiary-color: rgb(139, 139, 139);
 }
 
+/* GLOBAL */
 body {
   margin: 0;
 }
+
+/* HEADER */
 .header {
   background-color: var(--balck);
   color: var(--white);
@@ -17,15 +18,24 @@ body {
 .header h1 {
   font-size: 4rem;
 }
-.intro-container {
-  padding: 1rem;
+
+/* MAIN */
+.main {
+  padding: 0 2rem 3rem 2rem;
 }
+
+/* INTRO */
+.intro-container {
+  margin: 2rem 0;
+}
+
+/* CHARDS */
 .card-container {
   display: flex;
   flex-direction: row;
   overflow: scroll;
+  margin-left: -1rem;
 }
-
 .card {
   margin: 1rem;
   border-radius: 1rem;
@@ -44,18 +54,47 @@ body {
   text-align: justify;
   margin: 1rem 0;
 }
-
 .footer {
   background-color: var(--balck);
   padding: 2rem;
   color: var(--white);
 }
 
+/* CHATBOT */
 .chatbot-container {
-  background-color: rgb(200, 200, 200);
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  height: 500px;
-  width: 400px;
+  background-color: rgb(230, 230, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.chatbot-response {
+  border-radius: 1rem;
+  background-color: rgb(246, 246, 255);
+}
+.chatbot-response p {
+  margin: 2rem;
+  align-items: center;
+}
+.chatbot-request {
+  margin-top: 1rem;
+}
+.chatbot-request form {
+  display: flex;
+}
+.chatbot-request input {
+  flex-grow: 1;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+.chatbot-request label {
+  width: auto;
+  margin: auto 0;
+}
+.chatbot-request button {
+  width: 100px;
+  border-radius: 0.5rem;
+  border: none;
 }

@@ -4,7 +4,7 @@ console.log(dogTrainingSections[0].title);
 
 export default function Main() {
   return (
-    <main>
+    <main className="main">
       <div className="intro-container">
         <h2>The Importance of Training Your Dog</h2>
         <p>
@@ -22,7 +22,12 @@ export default function Main() {
 
       <section className="card-container">
         {dogTrainingSections.map((section) => (
-          <Card title={section.title} text={section.text} src={section.src} />
+          <Card
+            title={section.title}
+            text={section.text}
+            src={section.src}
+            key={section.title}
+          />
         ))}
       </section>
     </main>
