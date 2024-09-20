@@ -67,6 +67,8 @@ body {
   margin: 1rem 0;
 }
 .footer {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--green);
   padding: 2rem;
   color: var(--white);
