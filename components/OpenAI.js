@@ -9,7 +9,7 @@ export async function getOpenAIResponse(prompt) {
   // Initialize the OpenAI API with your key
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-  });
+    dangerouslyAllowBrowser: true});
 
   // Fetch data from the OpenAI API
   const messages = [
@@ -30,7 +30,7 @@ export async function getOpenAIResponse(prompt) {
       messages: messages,
       // temperature: 1,
     });
-    const promptAnswer = response.choices[0];
+    const promptAnswer = response.choices[0].message.content;
     return promptAnswer;
   } catch (error) {
     console.error("Error: ", error);
