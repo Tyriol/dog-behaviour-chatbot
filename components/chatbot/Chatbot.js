@@ -23,10 +23,11 @@ export default function Chatbot() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ messages: "what's the weather like today?" }),
+      body: JSON.stringify({ messages: inputValue }),
     });
     const data = await response.json();
-    console.log(data.result);
+    setAiResponse(data.result);
+    setInputValue(""); // clear the input field
   }
 
   return (

@@ -1,12 +1,12 @@
 import OpenAI from "openai";
 import "dotenv/config";
-// console.log(process.env.OPENAI_API_KEY);
+// console.log();
 
 export default async function handler(req, res) {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-    // dangerouslyAllowBrowser: true
   });
+
   try {
     const response = await openai.chat.completions.create({
       model: "gpt-4o-mini",
