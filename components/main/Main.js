@@ -1,6 +1,5 @@
 import dogTrainingSections from "../Data";
 import Card from "../cards/Card";
-console.log(dogTrainingSections[0].title);
 
 export default function Main() {
   return (

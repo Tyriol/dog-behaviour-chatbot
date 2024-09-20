@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { getOpenAIResponse } from "../OpenAI";
 
 export default function Chatbot() {
   // create a useState to store the input value
   const [inputValue, setInputValue] = useState("");
+  const [aiResponse, setAiResponse] = useState("");
 
   // create a function to retrive the input value
   function handleChange(e) {
@@ -13,15 +15,19 @@ export default function Chatbot() {
   }
 
   // create a function to submit the input value
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log("InputValue:", inputValue);
+    // call AI request function and save to variable
+    const response = await getOpenAIResponse(inputValue);
+    // set state of aiResponse to the result
+    setAiResponse(response);
+    console.log(aiResponse);
   }
 
   return (
     <div className="chatbot-container">
       <section className="chatbot-response">
-        <p>RESPONSE</p>
+        <p>{aiResponse}</p>
       </section>
       <section className="chatbot-request">
         <form onSubmit={(e) => handleSubmit(e)}>
