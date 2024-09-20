@@ -21,7 +21,6 @@
   - Inputs
   - Space for output
   - _(later) store history_
-  -
 
   - Build a back end
     - Store api key

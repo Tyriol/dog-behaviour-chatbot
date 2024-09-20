@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 
 export default function Chatbot() {
@@ -37,7 +35,12 @@ export default function Chatbot() {
       <section className="chatbot-request">
         <form onSubmit={(e) => handleSubmit(e)}>
           <label htmlFor="prompt">How can I help?</label>
-          <input id="prompt" type="text" onChange={(e) => handleChange(e)} />
+          <input
+            id="prompt"
+            type="text"
+            value={inputValue}
+            onChange={(e) => handleChange(e)}
+          />
           <button type="submit">submit</button>
         </form>
       </section>
