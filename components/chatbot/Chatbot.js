@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { getOpenAIResponse } from "../OpenAI";
 
 export default function Chatbot() {
   // create a useState to store the input value
@@ -18,10 +17,15 @@ export default function Chatbot() {
   async function handleSubmit(e) {
     e.preventDefault();
     // call AI request function and save to variable
-    const response = await getOpenAIResponse(inputValue);
-    // set state of aiResponse to the result
-    setAiResponse(response);
-    console.log(aiResponse);
+    const response = await fetch("/api/openai", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ messages: "what's the weather like today?" }),
+    });
+    const data = await response.json();
+    console.log(data.result);
   }
 
   return (
