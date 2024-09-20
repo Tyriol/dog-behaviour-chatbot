@@ -1,6 +1,5 @@
 "use client";
 
-import { Messages } from "openai/resources/beta/threads/messages";
 import { useState } from "react";
 
 export default function Chatbot() {
