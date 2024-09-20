@@ -9,7 +9,8 @@ export async function getOpenAIResponse(prompt) {
   // Initialize the OpenAI API with your key
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-    dangerouslyAllowBrowser: true});
+    // dangerouslyAllowBrowser: true
+  });
 
   // Fetch data from the OpenAI API
   const messages = [
